@@ -28,6 +28,26 @@ class DesktopScreenLayout extends StatelessWidget {
           const SizedBox(
             width: 10,
           ),
+          IconButton(
+              onPressed: () {},
+              icon: Image.asset(
+                'assets/images/more.png',
+                color: primaryColor,
+              )),
+          const SizedBox(
+            width: 10,
+          ),
+          Padding(
+            padding:
+                const EdgeInsets.symmetric(vertical: 10.0).copyWith(right: 10),
+            child: MaterialButton(
+                onPressed: () {},
+                color: Color(0xff1A73EB),
+                child: Text(
+                  "Sign in",
+                  style: TextStyle(color: Colors.white),
+                )),
+          )
         ],
       ),
       body: Text("Hello from Desktop"),
