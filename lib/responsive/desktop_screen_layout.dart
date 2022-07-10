@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google/colors.dart';
+import 'package:google/widgets/search.dart';
 
 class DesktopScreenLayout extends StatelessWidget {
   const DesktopScreenLayout({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: backgroundColor,
@@ -50,7 +53,25 @@ class DesktopScreenLayout extends StatelessWidget {
           )
         ],
       ),
-      body: Text("Hello from Desktop"),
+      body: Padding(
+        padding: EdgeInsets.only(left: 5, right: 5),
+        child: Column(children: [
+          SizedBox(
+            height: size.height * 0.25,
+          ),
+          Expanded(
+              child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                children: [
+                  Search(),
+                ],
+              )
+            ],
+          ))
+        ]),
+      ),
     );
   }
 }
