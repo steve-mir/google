@@ -43,7 +43,6 @@ class Search extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Image.asset(
                   'assets/images/voice.png',
-                  color: searcBorder,
                   width: 1,
                   height: 1,
                 ),
